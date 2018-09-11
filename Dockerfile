@@ -9,7 +9,7 @@ RUN go build -o main .
 
 FROM alpine:latest
 
-COPY --from=stage_0 /app .
+COPY --from=stage_0 /app /app
 
 EXPOSE 8080
 
