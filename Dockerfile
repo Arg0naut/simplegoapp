@@ -11,7 +11,7 @@ FROM alpine:latest
 
 COPY --from=stage_0 /app /app
 
-EXPOSE 8080
+EXPOSE 8088
 
 CMD ["/app/main"]
 
