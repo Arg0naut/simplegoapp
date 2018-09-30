@@ -5,8 +5,8 @@ node {
     def app
     stage('Initialize'){
         def dockerHome = tool 'myDocker'
-        def mavenHome  = tool 'myMaven'
-        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+        def goHome  = tool 'myGo'
+        env.PATH = "${dockerHome}/bin:${goHome}/bin:${env.PATH}"
     }
 
     stage('Clone repository') {
