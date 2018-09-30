@@ -5,7 +5,8 @@ node {
     def app
     stage('Initialize'){
         def dockerHome = tool 'myDocker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
+        def mavenHome  = tool 'myMaven'
+        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
 
     stage('Clone repository') {
         /* Clone the repo to our workspace */
