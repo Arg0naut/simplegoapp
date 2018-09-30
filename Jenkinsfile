@@ -3,11 +3,11 @@
 
 node {
     def app
-/*    stage('Initialize'){
+   stage('Initialize'){
         def dockerHome = tool 'myDocker'
         def goHome  = tool 'myGo'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }*/
+    }
 
     stage('Clone repository') {
         /* Clone the repo to our workspace */
