@@ -1,5 +1,15 @@
+
+
+def CONTAINER_NAME="jenkins-docker"
+def CONTAINER_TAG="latest"
+def DOCKER_HUB_USER="markgardner10"
+def HTTP_PORT="8090"
+
 node {
     def app
+    stage('Initialize'){
+        def dockerHome = tool 'myDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
 
     stage('Clone repository') {
         /* Clone the repo to our workspace */
