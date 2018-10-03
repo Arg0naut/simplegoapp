@@ -6,7 +6,7 @@ node {
    stage('Initialize'){
         def dockerHome = tool 'myDocker'
         def goHome  = tool 'myGo'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
+        env.PATH = "${dockerHome}/bin:${goHome}/bin:${env.PATH}"
     }
 
     stage('Clone repository') {
