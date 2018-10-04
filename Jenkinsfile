@@ -40,5 +40,9 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
+        docker.withRegistry('https://git.heroku.com/simplegoapp.git', 'heroku') {
+            app.push("${env.BUILD_NUMBER}")
+            app.push("latest")
+        }
     }
 }
